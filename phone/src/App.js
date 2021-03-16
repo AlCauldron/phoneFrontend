@@ -18,7 +18,7 @@ function App() {
   function delPerson(id,name){
     const confirm = window.confirm(`Delete ${name}?`)
     if (confirm) {
-        const request = axios.delete(`http://localhost:3001/api/persons/${id}`)
+        const request = axios.delete(`/api/persons/${id}`)
         return request.then(response=>response.data)
     }
   }
